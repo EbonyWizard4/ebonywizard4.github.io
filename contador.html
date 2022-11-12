@@ -16,6 +16,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <!-- meus estilos-->
+    <link href="css/meu-estilo.css" rel="stylesheet" />
+        
     <title>Contador</title>
 </head>
 <body>
@@ -41,8 +44,17 @@
                     <hr class="divider" />
                 </div>
                 <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 mb-5">Aqui eu construirei um contator com definição de passo.
-                    </p>
+                    <div class="gradient-border"> 
+                        <div id="dados">
+                            <p> Inicio da contagem: <input type="number" name="inicio" id="inicio"></p>
+                            <p> Fim da contagem: <input type="number" name="fim" id="fim"> </p>
+                            <p> Passo da contagem: <input type="number" name="passo" id="passo"></p>
+                        </div>
+                        <div id="resultado">
+                            Preparando a contagem ...
+                        </div>
+                        <button onclick="contar()">Contar</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,6 +83,6 @@
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    <script src="js/meu-script.js"></script>
+    <script src="js/meu-script-contador.js"></script>
 </body>
 </html>

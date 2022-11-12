@@ -1,5 +1,34 @@
 @charset "UTF-8";
 
-section{
-    background: red;
+
+.gradient-border{
+    border: solid 5px transparent;
+    border-radius: 10px;
+    background-image: linear-gradient(white, white), 
+        linear-gradient(315deg, #833ab4, #fd1d1d 50%, #fcb045);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+#dados{
+    margin: 10px;
+}
+
+button{
+    box-sizing: border-box;
+    border: solid 2px rgb(185, 129, 182);
+    border-radius: 0.6rem;
+    align-self: center;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 20px;
+    padding: 20px 40px;
+    text-align: center;
+    font-weight: hold;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 0 6px 7px -1px #833ab4;
+    transform: translateY(-15%);
 }
