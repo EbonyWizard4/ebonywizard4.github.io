@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+header, nav, main, aside, footer{
+    display: flex;
+    margin: 3px;
+    background-color: #a1a1a1;
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px;
+    flex: 1 1 100vw;
+}
+header{
+    flex: 1 1 100vw;
+    height: 100px;
+}
+nav{
+    flex: 1 1 200px;
+}
+main{
+    flex: 20 1 500px;
+    height: calc(100vh - 224px);
+}
+aside{
+    flex: 1 1 200px;
+}
+footer{
+    flex: 1 1 100vw;
+    height: 100px;
+}
+@media only screen and (max-width: 923px) {
+    maien {
+        height: calc(100vh - 330px);
+    }
+
+    aside {
+        flex: 1 1 100vw;
+        height: 100px;
+    }
+}
+@media only screen and (max-width: 717px) {
+    nav{
+        height: 100px;
+    }    
+
+    main{
+        height: calc(100vh - 436px);
+    }
+}
