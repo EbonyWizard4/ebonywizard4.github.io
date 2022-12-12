@@ -9,8 +9,10 @@
 </head>
 <body>
     <header>
-        <a href="#" id="logo">LOGO</a>
+        <a href="#" id="logo">Logo</a>
+
         <button id="openMenu">&#9776;</button>
+
         <nav id="menu">
             <button id="closeMenu">X</button>
             <a href="#">Início</a>
@@ -21,38 +23,19 @@
     </header>
     
     <aside>Relecionado</aside>
-
+    
     <main>
-        <h1>Principal</h1>
+        <hi>
+            Principal
+        </hi>
         <section></section>
     </main>
-    
+
     <footer>Rodapé</footer>
-    
-    <script type="text/javascript">
 
-        openMenu.addEventListener('click', () => {
-
-        menu.style.display = 'flex'
-        menu.style.right = (menu.offsetWidth * -1) + 'px'
-        openMenu.style.display = 'none'
-        setTimeout(() => {
-            menu.style.opacity = '1'
-            menu.style.right = '0'
-        }, 10)
-
-        })
-        closeMenu.addEventListener('click', () => {
-        menu.style.opacity = '0'
-        menu.style.right = (menu.offsetWidth * -1) + 'px'
-        setTimeout(() => {
-
-            menu.removeAttribute('style')
-            openMenu.removeAttribute('style')
-            
-        }, 200)
-
-        })
+    <script src="js/js_layout_05">
+        
     </script>
+
 </body>
 </html>

@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
-heder #logo{
-    flex: 0 1 200px;
-    background: #c9c9c9;
+/* Modificar o scroll */
+/* Firefox */
+* {
+    scrollbar-width: 12px;
+    scrollbar-color: #5a5a5a #9a9a9a;
 }
 
 header, nav, main, aside, footer{
@@ -22,6 +23,11 @@ body{
 }
 header{
     flex: 1 1 100vw;
+    height: 100px;
+}
+header #logo{
+    flex: 0 1 200px;
+    background: #c9c9c9;
 }
 #openMenu, #closeMenu{
     border: none;
@@ -43,6 +49,7 @@ nav a{
 }
 main{
     flex: 20 1 500px;
+    height: calc(100vh - 224px);
     flex-wrap: wrap;
     overflow: auto;
 }
@@ -50,35 +57,41 @@ main section{
     width: 100%;
     height: 2000px;
     margin: 10px;
-    background: linear-gradient(#9a9a9a, #5a5a5a, #1a1a1a);
+    background: linear-gradient(#9a9a9a), #5a5a5a, #1a1a1a;
 }
 aside{
     flex: 1 1 200px;
 }
 footer{
     flex: 1 1 100vw;
+    height: 100px;
 }
 a{
     text-decoration: none;
     color: inherit;
 }
 @media only screen and (max-width: 923px) {
-    header {
+    header{
         order: 0;
+
     }
+    
     main {
+        height: calc(100vh - 330px);
         order: 1;
     }
 
     aside {
         flex: 1 1 100vw;
+        height: 100px;
         order: 2;
+    }
+
+    footer{
+        order: 3;
 
     }
-    footer {
-    order: 3;
 
-    }
 }
 @media only screen and (max-width: 717px) {
     #openMenu, #closeMenu{
@@ -87,18 +100,20 @@ a{
     #openMenu{
         margin-left: auto;
     }
-    #closemenu{
+    #closeMenu{
         position: fixed;
         right: 15px;
-        top: 15px
+        top: 15px;
     }
     nav{
         position: fixed;
         flex-direction: column;
         width: 100vw;
-        background: rgba(255,255, 255, 0.8);
+        height: 100vw;
+        background: rgba(255, 255, 255, 0.8);
         justify-content: center;
         margin: 0;
+        display: none;
         opacity: 0;
         transition: 0.3s;
     }
